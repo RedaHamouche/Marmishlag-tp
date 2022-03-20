@@ -3,11 +3,12 @@
 <h1>Hello World</h1>
 <?php if (have_posts()) : ?>
     <section class="cards-list">
-        <?php //while(have_posts()) : ?>
+        <?php while(have_posts()) : ?>
+            <?php the_post(); ?>
             <article class="card">
-                <h2>We <\n3 Hugo + <?php the_title(); ?></h2>
+                <h2><?php the_title(); ?></h2>
             </article>
-        <?php //endwhile; ?>
+        <?php endwhile; ?>
     </section>
 <?php endif; ?>
 
