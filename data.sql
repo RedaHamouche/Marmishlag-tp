@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `data`
 --
-CREATE DATABASE IF NOT EXISTS `data` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `data`;
+CREATE DATABASE IF NOT EXISTS `marmishlag` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `marmishlag`;
 
 -- --------------------------------------------------------
 
