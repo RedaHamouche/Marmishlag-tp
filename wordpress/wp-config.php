@@ -28,7 +28,7 @@ define( 'DB_NAME', 'data' );
 define( 'DB_USER', 'root' );
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', 'password' );
+define( 'DB_PASSWORD', 'root' );
 
 /** Adresse de l’hébergement MySQL. */
 define( 'DB_HOST', 'db' );
