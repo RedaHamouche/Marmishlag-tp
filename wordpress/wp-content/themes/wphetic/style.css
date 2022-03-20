@@ -4,3 +4,24 @@ Author: Dark voudor
 Description: LUKE...
 Version: 1.0.0
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-list {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+}
+
+.card {
+    background: tomato;
+}
+
+.card:nth-child(2n) {
+    background: teal;
+}
