@@ -1,4 +1,11 @@
+<?php 
+    $ad = get_field('custom_banner_img');
+?>
 <?php get_header(); ?>
+
+<?php if (isset($ad)) : ?>
+    <img src="<?= $ad ?>" alt="pub"/>
+<?php endif; ?>
 
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : ?>
