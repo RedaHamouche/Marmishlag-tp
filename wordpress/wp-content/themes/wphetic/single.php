@@ -3,19 +3,24 @@
 ?>
 <?php get_header(); ?>
 
-<?php if (isset($ad)) : ?>
-    <img src="<?= $ad ?>" alt="pub"/>
-<?php endif; ?>
+<main class="single">
 
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
-        <section class="card">
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_excerpt(); ?></p>
-        </section>
-
-    <?php endwhile; ?>
-<?php endif; ?>
-
+    <?php if (isset($ad)) : ?>
+        <figure class="ad">
+            <img src="<?= $ad ?>" alt="pub"/>
+        </figure>
+    <?php endif; ?>
+        
+    <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : ?>
+            <?php the_post(); ?>
+            <section class="card">
+                <h2><?php the_title(); ?></h2>
+                <p><?php the_excerpt(); ?></p>
+            </section>
+            
+        <?php endwhile; ?>
+    <?php endif; ?>
+</main>
+                
 <?php get_footer(); ?>
