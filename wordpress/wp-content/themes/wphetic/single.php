@@ -1,5 +1,5 @@
 <?php 
-    $ad = get_field('custom_banner_img') || null;
+    $ad = get_field('custom_banner_img');
 ?>
 <?php get_header(); ?>
 
