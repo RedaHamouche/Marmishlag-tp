@@ -1,6 +1,7 @@
+<style> <?php include 'style.css'; ?> </style>
+
 <?php get_header(); ?>
 <?php query_posts('posts_per_page=21'); ?>
-<h1>Hello World</h1>
 <?php if (have_posts()) : ?>
     <section class="cards-list">
         <?php while(have_posts()) : ?>
