@@ -22,7 +22,6 @@ body {
 .cards-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr; */
   grid-auto-rows: 1fr;
   gap: 1.5rem 1rem;
   padding: 2rem 1rem;
@@ -105,20 +104,22 @@ body {
 }
 
 .nav-button {
-  background-color: teal;
+  background-color: #000;
   text-decoration: none;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 0.2rem;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .nav-button a {
+  color: #fff;
   padding: 8px 16px;
   line-height: 2rem;
 }
 
 .nav-button:hover {
-  background-color: #fafafa;
-  border: 1px solid #0a0a0a;
+  background-color: aquamarine;
+  color: #000;
 }
 
 .nav-link {
