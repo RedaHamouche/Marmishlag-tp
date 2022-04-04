@@ -119,6 +119,9 @@ body {
 
 .nav-button:hover {
   background-color: aquamarine;
+}
+
+.nav-button:hover a {
   color: #000;
 }
 
