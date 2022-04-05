@@ -10,7 +10,18 @@
 </head>
 <style> <?php include 'style.css'; ?> </style>
 <header class="header">
+    <a href="./">home</a>
     <h1>Marmishlag</h1>
+    <div>
+        <label for="categories-choice">Choisir une catégorie</label>
+        <input list="categories" id="categories-choice" name="categories-choice" />
+    </div>
+
+    <datalist id="categories">
+        <?php foreach (get_categories() as $category): ?>
+            <option value=<?= $category->slug ?>>
+        <?php endforeach; ?>
+    </datalist>
     
     <nav class="nav">
     <?php if(is_user_logged_in()) { ?>
@@ -20,4 +31,5 @@
         <?php } ?>
     </nav>
 </header>
+
 <body>
