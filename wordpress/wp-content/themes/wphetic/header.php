@@ -11,7 +11,7 @@
 <style> <?php include 'style.css'; ?> </style>
 <header class="header">
     <h1>Marmishlag</h1>
-    <a href="./">home</a>
+    <a href="./">Home</a>
     
     <nav class="nav">
     <?php if(is_user_logged_in()) { ?>
