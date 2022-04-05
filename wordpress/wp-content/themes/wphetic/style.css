@@ -72,42 +72,49 @@ body {
 
 .cards-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 1.5rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+  grid-auto-rows: minmax(250px, 500px);
+  justify-content: center;
+  gap: 1.5rem;
   padding: 2rem;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid #000;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease-out;
+
 }
 
 .card * + * {
   margin: 1rem 0 0 0;
 }
 
-.card a {
-  padding: 0.5rem 1rem;
-  background-color: #000;
-  border-radius: 0.2rem;
-  text-decoration: none;
-  color: #fff;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.card a:hover {
-  background-color: aquamarine;
-  color: #000;
-}
-
 .card h2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5% 0;
+  background-color: #FFFFFF90;
   text-align: center;
   font-size: 2rem;
+  transform: translate3d(0, 100%, 0);
+  transition: transform .3s ease-in-out;
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card:hover h2{
+  transform: translate3d(0, 0, 0)
 }
 
 /* HEADER */

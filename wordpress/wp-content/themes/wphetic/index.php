@@ -35,9 +35,8 @@
                 }
             ?>
             <article class="card" data-category='<?php echo $articleCategory;?>'>
+                <img src="<?php the_post_thumbnail_url(); ?>" class="card-img" alt="...">
                 <h2><?php the_title(); ?></h2>
-                <p><?php the_excerpt(); ?></p>
-                <a href="<?php the_permalink(); ?>" target="_blank" class="btn btn-primary">Lire plus</a>
             </article>
         <?php endwhile; ?>
     </section>
