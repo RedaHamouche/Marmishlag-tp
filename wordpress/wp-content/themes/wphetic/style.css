@@ -17,6 +17,7 @@ img {
 
 body {
   font-family: sans-serif;
+  background-color: #ece8ea;
 }
 
 /* HOME HERO */
@@ -83,7 +84,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  border-radius: 0.5rem;
   border: 1px solid #000;
 }
 
