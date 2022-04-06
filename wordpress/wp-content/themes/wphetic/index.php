@@ -39,15 +39,16 @@
                 <h2><?php the_title(); ?></h2>
             </a>
         <?php endwhile; ?>
+        <p class="notFound">Aucun résultat trouvé, veuillez vérifier la recherche</p>
     </section>
 <?php endif; ?>
 <script defer>
     const marmiArticles = document.querySelectorAll('.cards-list .card');
     const categoryChoice = document.querySelector('#categories-choice');
     const searchForm = document.querySelector('.hero .search');
+    const notFoundMessage = document.querySelector('.notFound');
 
-    searchForm.addEventListener('submit', (e) =>
-    {
+    searchForm.addEventListener('submit', (e) =>{
         e.preventDefault()
     })
 
@@ -57,12 +58,13 @@
 
     categoryChoice.addEventListener('keyup', (e) => {
         let inputValue = e.target.value;
-        if(!document.querySelector(`[data-category~='${e.target.value}']`) && inputValue.length) return;
+        let foundOne = 0;
         marmiArticles.forEach(article => {
-            if(inputValue.length === 0) return display(article, 'block');
             let currentCategory = article.dataset.category; 
-            currentCategory.includes(inputValue) ? display(article, 'block') : display(article, 'none') 
+            currentCategory.match(inputValue)|| (inputValue.length === 0)? display(article, 'block') : display(article, 'none');
+            currentCategory.match(inputValue) ? foundOne += 1 : null; 
         });
+        foundOne !== 0 || (inputValue.length === 0) ?  display(notFoundMessage, 'none') : display(notFoundMessage, 'block');
     });
 </script>
 

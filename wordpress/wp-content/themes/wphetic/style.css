@@ -4,6 +4,9 @@ Author: Dark voudor
 Description: LUKE...
 Version: 1.0.0
 */
+:root {
+  --main-bg-color: rgb(238, 159, 40);
+}
 
 * {
   margin: 0;
@@ -51,7 +54,15 @@ body {
   height: 40px;
   font-size: 20px;
   padding-left: 20px;
+  cursor: pointer;
 }
+
+.hero-search::selection, .hero-search:focus {
+  outline: 1px solid var(--main-bg-color);
+}
+input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
 
 .hero-bg {
   position: absolute;
@@ -103,7 +114,8 @@ body {
   bottom: 0;
   width: 100%;
   padding: 5% 0;
-  background-color: #ffffff90;
+  background-color: var(--main-bg-color);
+  color: white;
   text-align: center;
   font-size: 2rem;
   transform: translate3d(0, 100%, 0);
@@ -126,16 +138,18 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  padding: 10px;
+  padding: 40px 80px;
+  background-color: black;
 }
 
 .header a {
-  color: #000;
+  color: white;
   text-decoration: none;
 }
 
 .header a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--main-bg-color);
 }
 
 .nav {
@@ -146,7 +160,7 @@ body {
 }
 
 .nav-button {
-  background-color: #000;
+  background-color: white;
   text-decoration: none;
   border-radius: 0.2rem;
 
@@ -154,23 +168,40 @@ body {
 }
 
 .nav-button a {
-  color: #fff;
+  color: black;
   padding: 8px 16px;
   line-height: 2rem;
 }
 
 .nav-button:hover {
-  background-color: aquamarine;
+  background-color: var(--main-bg-color);
 }
 
 .nav-button:hover a {
-  color: #000;
+  color: white;
 }
 
 .nav-link {
   text-decoration: none;
   color: #0a0a0a;
 }
+
+
+@media screen and (max-width: 992px) {
+  .header {
+    padding: 40px 20px;
+  }
+
+  .nav-button {
+    padding: 0 10px;
+  }
+
+  .nav-button a{
+      padding: 0;
+  }
+  
+ }
+ 
 
 /* ARTICLE */
 
@@ -219,4 +250,8 @@ body {
 
 .single .article p {
   padding-top: 1rem;
+}
+
+.notFound {
+  display: none;
 }
