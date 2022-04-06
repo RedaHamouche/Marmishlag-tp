@@ -2,7 +2,7 @@
 
 <section class="hero">
     <h1>Marmishlag</h1>
-    <form>
+    <form class="search">
         <input
             class="hero-search"
             list="categories"
@@ -34,7 +34,7 @@
                     $articleCategory = $articleCategory . ' ' . $category->slug;
                 }
             ?>
-            <a href="<?php the_permalink(); ?>" class="card" data-category='<?php echo $aCategory;?>'>
+            <a href="<?php the_permalink(); ?>" class="card" data-category='<?php echo $articleCategory;?>'>
                 <img src="<?php the_post_thumbnail_url(); ?>" class="card-img" alt="...">
                 <h2><?php the_title(); ?></h2>
             </a>
@@ -44,6 +44,12 @@
 <script defer>
     const marmiArticles = document.querySelectorAll('.cards-list .card');
     const categoryChoice = document.querySelector('#categories-choice');
+    const searchForm = document.querySelector('.hero .search');
+
+    searchForm.addEventListener('submit', (e) =>
+    {
+        e.preventDefault()
+    })
 
     function display(el, disp = 'block' ){
         el.style.display = disp;
