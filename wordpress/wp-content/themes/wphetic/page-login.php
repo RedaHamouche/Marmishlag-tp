@@ -13,7 +13,7 @@ get_header();
             <input type="password" id="pass" name="pwd" placeholder="password">
         </div>
         <div>
-            <input type="submit" value="se connecter" name="wp-submit">
+            <input type="submit" value="se connecter" name="wp-submit" class="nav-button">
         </div>
     </form>
 </main>

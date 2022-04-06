@@ -17,7 +17,7 @@ get_header();
             <label for="pass">Mot de passe</label>
             <input type="password" id="pass" name="pwd" placeholder="password" required>
         </div>
-        <input type="submit" value="Envoyer" >
+        <input type="submit" value="Envoyer" class="nav-button" >
         <?php wp_nonce_field('register', 'register'); ?>
     </form>
 </main>
