@@ -10,13 +10,14 @@
 </head>
 <style> <?php include 'style.css'; ?> </style>
 <header class="header">
-    <a href="./"><h1> Marmishlag</h1></a>
+    <a href="<?= home_url('/') ?>"><h1> Marmishlag</h1></a>
     
     <nav class="nav">
     <?php if(is_user_logged_in()) { ?>
         <li class="nav-button"><a href="wp-admin/post-new.php" class="nav-link">Créer une recette</a></li>
         <?php } else { ?>
-        <li class="nav-button"><a href="wp-admin" class="nav-link">Se connecter</a></li>
+        <li class="nav-button"><a href="/login" class="nav-link">Se connecter</a></li>
+        <li class="nav-button"><a href="/register" class="nav-link">S'inscrire</a></li>
         <?php } ?>
     </nav>
 </header>

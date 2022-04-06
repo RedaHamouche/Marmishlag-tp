@@ -255,3 +255,23 @@ input::-webkit-calendar-picker-indicator {
 .notFound {
   display: none;
 }
+
+
+/* FORMS */
+
+.login, .register {
+  width: 80%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form form {
+  width: 100%;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+}

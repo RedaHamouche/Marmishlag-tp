@@ -1,5 +1,3 @@
-<style> <?php include 'style.css'; ?> </style>
-
 <?php 
     $ad = get_field('custom_banner_img');
 ?>
