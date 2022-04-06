@@ -202,17 +202,21 @@ body {
 }
 
 .single .article {
+  width: 100%;
   line-height: 150%;
+  max-width: 900px;
+  margin: auto;
 }
 
 .single .article h1 {
   font-size: 3rem;
+  text-align: center;
 }
 
 .single .article h2 {
   font-size: 2.5rem;
 }
 
-.single .article p + p {
+.single .article p {
   padding-top: 1rem;
 }
