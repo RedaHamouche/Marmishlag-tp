@@ -34,10 +34,10 @@
                     $articleCategory = $articleCategory . ' ' . $category->slug;
                 }
             ?>
-            <article class="card" data-category='<?php echo $articleCategory;?>'>
+            <a href="<?php the_permalink(); ?>" class="card" data-category='<?php echo $aCategory;?>'>
                 <img src="<?php the_post_thumbnail_url(); ?>" class="card-img" alt="...">
                 <h2><?php the_title(); ?></h2>
-            </article>
+            </a>
         <?php endwhile; ?>
     </section>
 <?php endif; ?>
